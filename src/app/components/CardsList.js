@@ -37,7 +37,7 @@ function CardsList() {
                 <li key={card.id} className='list-none'>
 
                     <Link href={{
-                        pathname: "/editCardPage",
+                        pathname: "/cardDetailPage",
                         query: { id: card.id, title: card.title, description: card.description, created_at: card.created_at, difficulty: card.difficulty, is_liked: card.is_liked }
                     }}>
                         <Card

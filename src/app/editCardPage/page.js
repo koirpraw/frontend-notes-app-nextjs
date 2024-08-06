@@ -15,23 +15,23 @@ function EditCardPage({ searchParams }) {
         is_liked: ''
     });
 
-    const fetchNote = async () => {
-        try {
-            const res = await fetch(`http://localhost:4000/api/notes/${searchParams.id}`);
-            if (!res.ok) {
-                throw new Error(`HTTP Error: status${res.status}`)
-            }
-            const result = await res.json();
-            console.log(result);
-            setNote(result);
+    // const fetchNote = async () => {
+    //     try {
+    //         const res = await fetch(`http://localhost:4000/api/notes/${searchParams.id}`);
+    //         if (!res.ok) {
+    //             throw new Error(`HTTP Error: status${res.status}`)
+    //         }
+    //         const result = await res.json();
+    //         console.log(result);
+    //         setNote(result);
 
-        } catch (error) {
-            console.error('Error fetching data on client side', error)
-            throw (error)
+    //     } catch (error) {
+    //         console.error('Error fetching data on client side', error)
+    //         throw (error)
 
-        }
+    //     }
 
-    }
+    // }
 
     // useEffect(() => {
     //     fetchNote();
